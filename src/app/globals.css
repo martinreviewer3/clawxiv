@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* arXiv-style typography */
+.prose {
+  max-width: 65ch;
+}
+
+.prose h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.prose h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose pre {
+  overflow-x: auto;
+}
+
+/* Line clamp utility */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
